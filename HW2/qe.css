@@ -1,0 +1,41 @@
+body {
+    background: #c7b39b;
+    color: #fff;
+    font-size: 20pt;
+}
+
+table {
+    width: 100%;
+    height: 100px;
+    background: #b6a17b;
+}
+
+.container input[type='number'] {
+    width: 5%;
+}
+
+th {
+    text-align: center;
+    background: c#d37d1a41;
+    border-right: 3px solid rgba(0, 0, 0, 0.1);
+    border-left: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+tr:nth-child(odd) {
+    text-align: center;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    background: rgb(211, 209, 180);
+    /* фон нечетных столбцов */
+}
+
+tr:nth-child(even) {
+    text-align: center;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    background: #a87777;
+    /* фон четных столбцов */
+}
+
+tr:hover td {
+    background: #9e7da7;
+    /* фон строки при наведении */
+}
