@@ -84,7 +84,8 @@ addNodeHelper(noderoot: NodeTree<T>, newNode: NodeTree<T>): void {
             return node;
         } else {
             if (node.left === undefined && node.right === undefined) {
-                node = undefined;
+
+                delete node.left;
                 return node;
             }
             if (node.left === undefined && node.right !== undefined) {
@@ -94,8 +95,8 @@ addNodeHelper(noderoot: NodeTree<T>, newNode: NodeTree<T>): void {
                 node = node.left;
                 return node;
             }
-            if(node.right !== undefined) {
-            let newNode = this.minNode(node.right);
+            if (node.right !== undefined) {
+            const newNode = this.minNode(node.right);
             node.value = newNode.value;
             node.right = this.removeNode(node.right, newNode.value);
             return node; }
